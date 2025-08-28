@@ -50,7 +50,7 @@ listaClientes.unshift({
   cpf: 684759321,
 });
 
-document.write("<b>---- Array Atualizado Com Novo Objeto No Inicio ---</b><br><br>")
+document.write("<b>---- Array Atualizado Com Novo Objeto No Início ---</b><br><br>")
 
 listaClientes.forEach((cliente) => {
   document.write(`
