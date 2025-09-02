@@ -19,25 +19,23 @@ class Heroi {
   }
 }
 
-const HomemAranha = new Heroi("Homem-Aranha", 100, 250, 10);
-console.log(HomemAranha.teia === 1 ? "Pode soltar teia" : "Não pode soltar teia");
-
+const HomemAranha = new Heroi("Homem-Aranha", 100, 250, 500);
+HomemAranha.teia = 0;
 HomemAranha.sentidoAranha = () => {
   return "Detectou Perigo";
 };
 
 const Superman = new Heroi("Superman", 300, 100, 1000);
-console.log(Superman.podeVoar === 1 ? "Pode voar" : "Não pode voar");
-
+Superman.voar = 0;
 Superman.visaoCalor = () => {
   return "Usando sua visão de Calor";
 };
 
 const Batman = new Heroi("Batman", 50, 50, 20);
-console.log(Batman.esconder === 1 ? "Está escondido" : "Não está escondido");
+Batman.esconder = 1;
 
 Batman.investigar = () => {
   return "Investigando um Crime";
 };
 
-document.write(`<p>O super-herói ${heroi.marca} ${carroEsportivo.modelo} também possui neon da cor ${carroEsportivo.corNeon}. E quando usa o turbo ${carroEsportivo.turbo()}</p>`)
+document.write(`<p>O super-herói ${HomemAranha.nome} possui ${HomemAranha.vida} de vida, também possui a velocidade de ${HomemAranha.vida}. A sua força é de ${HomemAranha.forca} e ${HomemAranha.teia} e ${HomemAranha.sentidoAranha()}</p>`)
