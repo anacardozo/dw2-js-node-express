@@ -23,7 +23,7 @@ const diaSemana = dataAtual.getDay();
 document.write(`<p>Dia da semana: ${diaSemana + 1} </p>`);
 
 //Adicionando Dias, Meses e Anos à Data atual
-// Adicionando 4 anos ao ano atual
+// Adicionando 4 anos ao ano atua l
 
 dataAtual.setFullYear(dataAtual.getFullYear() + 4);
 
