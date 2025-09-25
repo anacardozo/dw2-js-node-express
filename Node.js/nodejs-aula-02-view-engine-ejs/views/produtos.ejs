@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Node.js e Express.js</title>
+</head>
+<body>
+    <h1>Página de Produtos</h1>
+    <hr>
+    <h2>Lista de Produtos:</h2>
+    <%#= produtos %>
+
+    <!-- Percorrendo a lista de produtos com forEach -->
+
+    <ul>
+        <!-- Produtos - é a lista inteira -->
+         <!-- Produto - é cada item da lista -->
+        <% produtos.forEach(produto => { %>
+        <li><%= produto.nome %> </li>
+        <li><%= produto.preco.toLocaleString("pt-br", {style: "currency", currency: "BRL"}) %> </li>
+        <br>
+        <% }) %>
+
+    </ul>
+    
+    <!-- cada tag que eu tenha que usar o ejs eu tenho que abrir e fechar em cada linha -->
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
