@@ -2,8 +2,11 @@
 import express from "express";
 // Iniciando o Express
 const app = express();
+//importando o middleware de autenticação
+import Auth from "./middleware/Auth.js"
 //Importando o express session (gerador de sessões)
 import session from "express-session";
+
 
 // Importando o Sequelize
 import connection from "./config/sequelize-config.js";
@@ -74,7 +77,7 @@ app.use("/", ProdutosController);
 app.use("/", UsersController);
 
 // ROTA PRINCIPAL
-app.get("/", function (req, res) {
+app.get("/", Auth ,function (req, res) {
   res.render("index");
 });
 
